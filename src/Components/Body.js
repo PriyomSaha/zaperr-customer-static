@@ -7,7 +7,6 @@ import {
   TextField,
   useMediaQuery,
 } from "@mui/material";
-import PublicRoundedIcon from "@mui/icons-material/PublicRounded";
 import { useTheme } from "@mui/material/styles";
 
 const Body = () => {
