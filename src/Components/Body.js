@@ -8,6 +8,7 @@ import {
   useMediaQuery,
 } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
+import Logo from "../Logo.png";
 
 const Body = () => {
   const theme = useTheme();
@@ -24,7 +25,7 @@ const Body = () => {
     >
       <Box
         sx={{
-          backgroundColor: "#4a148c",
+          backgroundColor: "#280157",
           color: "white",
           p: 4,
           display: "flex",
@@ -35,7 +36,7 @@ const Body = () => {
           textAlign: "center",
         }}
       >
-        <Typography
+        {/* <Typography
           variant="h2"
           sx={{
             fontFamily: "Poppins, sans-serif",
@@ -46,7 +47,10 @@ const Body = () => {
           }}
         >
           Zaperr
-        </Typography>
+        </Typography> */}
+        <Box className="image-container" mb={3}>
+          <img src={Logo} alt="logo" className="centered-image" />
+        </Box>
         <Typography
           variant="h4"
           sx={{

@@ -21,6 +21,7 @@ const Footer = () => {
         display: "flex",
         alignItems: "center",
         justifyContent: "space-evenly",
+        flexDirection: isSmallScreen ? "column" : "row",
         height: isSmallScreen ? "auto" : "5vh",
         position: "fixed",
         bottom: 0,
@@ -33,6 +34,7 @@ const Footer = () => {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
+          mb: isSmallScreen ? 2 : 0,
         }}
       >
         <IconButton color="inherit">
@@ -70,7 +72,11 @@ const Footer = () => {
       >
         <Typography
           variant="body2"
-          sx={{ textDecoration: "none", color: "inherit" }}
+          sx={{
+            textDecoration: "none",
+            color: "inherit",
+            mb: isSmallScreen ? 1 : 0,
+          }}
         >
           <RouterLink
             to="/terms&condition"
@@ -79,7 +85,29 @@ const Footer = () => {
             Terms and Conditions
           </RouterLink>
         </Typography>
-
+        {!isSmallScreen && (
+          <Typography variant="body2" sx={{ mx: 1 }}>
+            |
+          </Typography>
+        )}
+        <Typography
+          variant="body2"
+          sx={{
+            textDecoration: "none",
+            color: "inherit",
+            mb: isSmallScreen ? 1 : 0,
+          }}
+        >
+          <RouterLink
+            to="/privacy-policy"
+            style={{
+              textDecoration: "none",
+              color: "inherit",
+            }}
+          >
+            Privacy Policy
+          </RouterLink>
+        </Typography>
         {!isSmallScreen && (
           <Typography variant="body2" sx={{ mx: 1 }}>
             |
@@ -87,10 +115,10 @@ const Footer = () => {
         )}
         <Typography variant="body2">
           <RouterLink
-            to="/privacy-policy"
+            to="/refund-policy"
             style={{ textDecoration: "none", color: "inherit" }}
           >
-            Privacy Policy
+            Refund Policy
           </RouterLink>
         </Typography>
       </Box>

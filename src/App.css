@@ -23,3 +23,15 @@ footer {
   height: 50px;
   /* Adjust according to your footer height */
 }
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.centered-image {
+  max-width: 50%;
+  /* Ensures the image fits within its container */
+  height: auto;
+  /* Maintains the aspect ratio */
+}

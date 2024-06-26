@@ -9,6 +9,7 @@ const TermsAndConditions = lazy(() =>
   import("./Components/TermsAndConditions")
 );
 const PrivacyPolicy = lazy(() => import("./Components/PrivacyPolicy"));
+const RefundPolicy = lazy(() => import("./Components/RefundPolicy"));
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/" element={<Body />} />
           <Route path="/terms&condition" element={<TermsAndConditions />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/refund-policy" element={<RefundPolicy />} />
         </Routes>
       </Suspense>
       <Footer />
