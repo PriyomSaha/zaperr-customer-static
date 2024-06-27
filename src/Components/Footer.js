@@ -121,6 +121,19 @@ const Footer = () => {
             Refund Policy
           </RouterLink>
         </Typography>
+        {!isSmallScreen && (
+          <Typography variant="body2" sx={{ mx: 1 }}>
+            |
+          </Typography>
+        )}
+        <Typography variant="body2">
+          <RouterLink
+            to="/cancellation-policy"
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
+            Cancellation Policy
+          </RouterLink>
+        </Typography>
       </Box>
     </Box>
   );
