@@ -13,14 +13,16 @@ const RefundPolicy = lazy(() => import("./Components/RefundPolicy"));
 const CancellationPolicy = lazy(() =>
   import("./Components/CancellationPolicy")
 );
+const AboutUs = lazy(() => import("./Components/AboutUs"));
 
 function App() {
   return (
     <Router>
-      {/* <Navbar /> */}
+      {/* <Navbar/> */}
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
           <Route path="/" element={<Body />} />
+          <Route path="/about-us" element={<AboutUs />} />
           <Route path="/terms&condition" element={<TermsAndConditions />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/refund-policy" element={<RefundPolicy />} />

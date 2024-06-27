@@ -1,16 +1,9 @@
 import React from "react";
 import { Typography, Container, Box } from "@mui/material";
-import useMediaQuery from "@mui/material/useMediaQuery";
-import { useTheme } from "@mui/material/styles";
 
 function RefundPolicy() {
-  const theme = useTheme();
-  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
   return (
-    <Container
-      maxWidth="md"
-      sx={{ paddingBottom: isSmallScreen ? "50vh" : "20vh" }}
-    >
+    <Container maxWidth="md" sx={{ paddingBottom: "5vh" }}>
       <Box sx={{ fontFamily: "Poppins, sans-serif", mt: 4 }}>
         <Typography
           variant="h4"

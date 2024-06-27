@@ -13,6 +13,7 @@ import Logo from "../Logo.png";
 const Body = () => {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
+
   return (
     <Box
       sx={{
@@ -20,14 +21,16 @@ const Body = () => {
         flexDirection: { xs: "column", sm: "row" },
         height: "90vh",
         minHeight: "90vh",
-        maxHeight: "auto",
+        maxHeight: "90vh",
+        maxWidth: "100vw",
       }}
     >
       <Box
         sx={{
           backgroundColor: "#280157",
           color: "white",
-          p: 4,
+          px: isSmallScreen ? 0.5 : 2,
+          py: 2,
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
@@ -36,18 +39,6 @@ const Body = () => {
           textAlign: "center",
         }}
       >
-        {/* <Typography
-          variant="h2"
-          sx={{
-            fontFamily: "Poppins, sans-serif",
-            fontWeight: "900",
-            fontStyle: "italic",
-            mb: 3,
-            letterSpacing: 3,
-          }}
-        >
-          Zaperr
-        </Typography> */}
         <Box className="image-container" mb={3}>
           <img src={Logo} alt="logo" className="centered-image" />
         </Box>
@@ -58,7 +49,9 @@ const Body = () => {
             fontWeight: "700",
             mb: 2,
             letterSpacing: 2,
-            display: isSmallScreen ? "none" : "inherit",
+            display: isSmallScreen ? "none" : "block",
+            wordWrap: "break-word",
+            overflowWrap: "break-word",
           }}
         >
           PREMIUM DELIVERY SERVICES
@@ -69,18 +62,26 @@ const Body = () => {
             fontFamily: "Playwrite NG Modern, sans-serif",
             fontWeight: "bold",
             mb: 2,
+            wordWrap: "break-word",
+            overflowWrap: "break-word",
           }}
         >
           Tingle your tastebuds
         </Typography>
-        <Typography>
+        <Typography
+          sx={{
+            wordWrap: "break-word",
+            overflowWrap: "break-word",
+          }}
+          fontSize={isSmallScreen ? 10 : 20}
+        >
           Download Our App to get 10% discount on your first order.
         </Typography>
       </Box>
       <Box
         sx={{
           backgroundColor: "#FFFEFE",
-          p: 4,
+          p: 2,
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
@@ -88,12 +89,15 @@ const Body = () => {
           width: { xs: "100%", sm: "50%" },
         }}
       >
-        {/* Add content for the white side */}
         <Typography
           variant="h4"
           fontWeight={600}
           fontFamily={"Poppins, sans-serif"}
-          fontSize={50}
+          fontSize={isSmallScreen ? 30 : 50}
+          sx={{
+            wordWrap: "break-word",
+            overflowWrap: "break-word",
+          }}
         >
           Welcome!!
         </Typography>
@@ -101,7 +105,11 @@ const Body = () => {
           variant="h3"
           fontWeight={200}
           fontFamily={"Poppins, sans-serif"}
-          fontSize={20}
+          fontSize={isSmallScreen ? 15 : 20}
+          sx={{
+            wordWrap: "break-word",
+            overflowWrap: "break-word",
+          }}
         >
           Premium Delivery Service.
         </Typography>
@@ -110,7 +118,7 @@ const Body = () => {
           variant="outlined"
           placeholder="Enter your location"
           fullWidth
-          sx={{ mt: 2 }}
+          sx={{ mt: 2, width: isSmallScreen ? "90vw" : "100%" }}
           InputProps={{
             endAdornment: (
               <InputAdornment position="end">
