@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.ssit.zaperr",
+    "sha256_cert_fingerprints":
+    ["A9:07:58:DC:ED:3A:B2:0E:36:AA:D1:B1:6E:AC:D0:AB:CB:80:33:52:77:61:47:1B:3C:41:F5:E9:53:55:07:F5"]
+  }
+}]

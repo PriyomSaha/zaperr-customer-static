@@ -49,7 +49,7 @@ const Footer = () => {
             mb: isSmallScreen ? 2 : 0,
           }}
         >
-          <IconButton color="inherit">
+          <IconButton color="inherit" href="https://www.zaperr.com/android">
             <Box
               sx={{
                 display: "flex",
